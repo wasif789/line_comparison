@@ -21,13 +21,17 @@ namespace line_comparison
             int y3 = Convert.ToInt32(Console.ReadLine());
             double length2 = Math.Sqrt(Math.Pow((x3 - x2), 2) + Math.Pow((y3 - y2), 2));
             Console.WriteLine("length of line 2 is :" + length2);
-            if (length==length2)
+            if (length < length2)
             {
-                Console.WriteLine("both lines are equal in length");
+                Console.WriteLine("line 1 is less than line 2");
+            }
+            else if (length > length2)
+            {
+                Console.WriteLine("line 1 is greater than line 2");
             }
             else
             {
-                Console.WriteLine("lines are not equal");
+                Console.WriteLine("both lines are equal");
             }
         }
     }
