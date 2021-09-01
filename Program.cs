@@ -15,7 +15,20 @@ namespace line_comparison
             x2 = Convert.ToInt32(Console.ReadLine());
             y2 = Convert.ToInt32(Console.ReadLine());
             double length = Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2));
-            Console.WriteLine("length of given line is:" + length);
+            Console.WriteLine("length of line1 is:" + length);
+            Console.WriteLine("enter another point co-ordinates for comparison x3 and y3");
+            int x3 = Convert.ToInt32(Console.ReadLine());
+            int y3 = Convert.ToInt32(Console.ReadLine());
+            double length2 = Math.Sqrt(Math.Pow((x3 - x2), 2) + Math.Pow((y3 - y2), 2));
+            Console.WriteLine("length of line 2 is :" + length2);
+            if (length==length2)
+            {
+                Console.WriteLine("both lines are equal in length");
+            }
+            else
+            {
+                Console.WriteLine("lines are not equal");
+            }
         }
     }
 }
